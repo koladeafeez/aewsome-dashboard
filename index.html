@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <main>
+
+        <div id="logo">
+           <h2> solve</h2>
+           
+        </div>
+        <div id="user">
+            <input type="search" name="search" id="search" placeholder="&#128269; Search">
+            <img id='notification-icon' src="images/bell-regular.svg" alt="notification">
+            <img class='header-icons' src="images/favicon.ico" alt="">
+        </div>
+
+
+
+    <!-- sidebar -->
+  
+        <aside id='sidebar'>
+            <ul>
+                <li class='selected-link'><span><a href='#dashboard-section'><img src="images/address-card-solid.svg" alt="" >  Dashboard</a></span></li>
+                <li><span><a href='#client-section'><img src="images/users-solid.svg" alt=""> Clients</a></span></li>
+                <li><span><a href='#basket'><img src="images/shopping-basket-solid.svg" alt="">Baskets</a></span></li>
+                <li><span><a href='#orders'><img src="images/inbox-solid.svg" alt="">Orders</a></span></li>
+                <li><span><a href='#product'><img src="images/cube-solid.svg" alt="">Products</a></span></li>
+                <li><span><a href="#support"><img src="images/headset-solid.svg" alt="">Support</a></span></li>
+                <li><span><a href='#insight'><img src="images/chart-pie-solid.svg" alt="">Insight</a></span></li>
+                <li><span><a href='#setting'><img src="images/sliders-h-solid.svg" alt="">Broad Setting</a></span></li>
+                <li><span><a href='#account'><img src="images/user-circle-regular.svg" alt="">Account</a></span></li>
+            </ul>
+        </aside>
+   
+    <!-- main -->
+    <article id='main-area'>
+    <section id="dashboard-section">
+        <a name='dashboard-section'>
+        <h2 id="dashboard-h2">Dashboard</h2>
+        <div>
+            <h3>CLIENTS</h3> <span><img src="images/users-solid.svg" alt=""></span>
+            <p>625.k</p> 
+        </div>
+        <div>
+            <h3>INVOICES</h3> <span> <img src="images/file-invoice-solid.svg" alt=""></span>
+            <p>134</p>
+        </div>
+        <div>
+            <h3>OPEN TICKETS</h3> <span><img src="images/address-card-solid.svg" alt=""></span>
+            <p>366</p>
+        </div>
+        <div>
+            <h3>CLOSED TICKETS</h3> <span><img src="images/ticket-alt-solid.svg" alt=""></span>
+            <p>289</p>
+        </div>
+        </a>
+    </section>
+    <section id="client-section">
+        <h2 id="client-heading">Clients</h2>
+        <div>
+        <span>
+            <img src="https://i.picsum.photos/id/0/5616/3744.jpg" alt="">
+            <p>
+                <h3> Kelvin Noaboa </h3>
+                <small>kelvinnoboa@gmail.com</small>
+            </p>
+        </span>
+        <span>
+            <img id='client-image' src="https://i.picsum.photos/id/10/2500/1667.jpg" alt="">
+            <p>
+                <h3> Joana Leita </h3>
+                <small>joanaleita@gmail.com</small>
+            </p>
+        </span>
+        <span>
+            <img src="https://i.picsum.photos/id/1001/5616/3744.jpg" alt="">
+            <p>
+                <h3> Jacquan Har </h3>
+                <small>jacquanhar@gmail.com</small>
+            </p>
+        </span>
+        <span>
+            <img src="https://i.picsum.photos/id/1000/5626/3635.jpg" alt="">
+            <p>
+                <h3> Emelda Amini </h3>
+                <small>emeldaamini@gmail.com</small>
+            </p>
+        </span>
+        <span>
+            <img src="https://i.picsum.photos/id/100/2500/1656.jpg" alt="">
+            <p>
+                <h3> Lee Chung </h3>
+                <small>leechung@gmail.com</small>
+            </p>
+        </span>
+        </div>
+
+    </section>
+    </article>
+</main>
+
+
+<script>
+    let links = document.querySelectorAll('li');
+    links.forEach(link => {
+        link.addEventListener('click', e =>{
+            let notActive = document.querySelector('.selected-link') 
+             notActive.classList.remove('selected-link');
+             link.classList.add('selected-link')
+        })
+    })
+
+</script>
+</body>
+
+</html>
